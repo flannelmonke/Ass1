@@ -1,0 +1,26 @@
+&lt!DOCTYPE html&gt
+&lthtml lang="en"&gt
+&lthead&gt
+    &ltmeta charset="UTF-8"&gt
+    &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+    &lttitle&gtResponsive Navigation Menu&lt/title&gt
+    &ltstyle&gt
+        /* CSS for navigation menu */
+        /* Your CSS code here */
+    &lt/style&gt
+&lt/head&gt
+&ltbody&gt
+    &ltnav&gt
+        &ltul&gt
+            &ltli&gt&lta href="#"&gtHome&lt/a&gt&lt/li&gt
+            &ltli&gt&lta href="#"&gtAbout&lt/a&gt&lt/li&gt
+            &ltli&gt&lta href="#"&gtServices&lt/a&gt&lt/li&gt
+            &ltli&gt&lta href="#"&gtContact&lt/a&gt&lt/li&gt
+        &lt/ul&gt
+    &lt/nav&gt
+    &ltscript&gt
+        // JavaScript for responsive navigation menu
+        // Your JavaScript code here
+    &lt/script&gt
+&lt/body&gt
+&lt/html&gt
