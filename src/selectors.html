@@ -1,15 +1,306 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selectors</title>
     <link rel="stylesheet" href="./resources/styles/selectors.css">
+    <link rel="icon" href="./resources/favicon.svg">
 </head>
 
 <body>
+    &lt; &gt;
+    <header>
+        <h1
+            class="lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
+            Selectors</h1>
+        <div class="flex justify-center">
+            <ul class="menu menu-vertical lg:menu-horizontal bg-base-200 rounded-box">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./JavaScript.html">JScript</a></li>
+                <li><a href="./selectors.html">Selectors</a></li>
+                <li><a>JQuery</a></li>
+                <li><a>Ajax</a></li>
+                <li><a>Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="flex">
 
+            <div class="col-span-1 space-y-2">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-2xl font-bold">Quick Links</h2>
+                </div>
+                <nav class="space-y-2">
+                    <a class="text-primary hover:underline" href="#Introduction">
+                        Introduction
+                    </a> <br>
+                    <a class="text-primary hover:underline" href="#Advantages">
+                        Advantages
+                    </a> <br>
+                    <a class="text-primary hover:underline" href="#Disadvantages">
+                        Disadvantages
+                    </a> <br>
+                    <a class="text-primary hover:underline" href="#Usages">
+                        Usages
+                    </a> <br>
+                    <a class="text-primary hover:underline" href="#Program Examples">
+                        Program Examples
+                    </a> <br>
+                </nav>
+            </div>
+
+
+            <div class="container mx-auto max-w-screen-lg px-4 md:px-6 lg:px-8 py-12 md:py-6 lg:py-10">
+                <div class="grid gap-8 md:grid-cols-3 lg:grid-cols-4">
+                    <div class="col-span-1 space-y-2">
+                        <div class="flex items-center gap-2">
+
+
+                            <section class="w-full py-12 md:py-24 lg:py-32 mx-12">
+                                <h2 class="text-2xl font-bold">Tag Selectors</h2>
+                                <p class="text-gray-500 dark:text-gray-400">This section demonstrates the use of tag
+                                    selectors in CSS.</p>
+                                <div id="tag1">
+                                    <p class="text-gray-500 dark:text-gray-400">This is a paragraph.</p>
+                                    <div class="text-gray-500 dark:text-gray-400">This is a div.</div>
+                                    <span class="text-gray-500 dark:text-gray-400">This is a span.</span>
+                                </div>
+                                <p class="text-gray-500 dark:text-gray-400">In this example, we select all &lt;div&gt;
+                                    elements using the
+                                    <code>document.querySelectorAll('div')</code> method.
+                                    Then, we use the <code>forEach</code> method to iterate over each selected element
+                                    and
+                                    change its text
+                                    color to blue using the <code>style.color</code> property.
+                                </p>
+                            </section>
+
+                            <section class="w-full py-12 md:py-24 lg:py-32 mx-12">
+                                <h2 class="text-2xl font-bold">ID Selectors</h2>
+                                <p class="text-gray-500 dark:text-gray-400">This section demonstrates the use of ID
+                                    selectors in CSS.</p>
+                                <div id="selectId">
+                                    <p id="para1">This is a unique paragraph.</p>
+                                </div>
+                                <p class="text-gray-500 dark:text-gray-400">In this example, we select an element with
+                                    the
+                                    ID
+                                    "uniqueParagraph" using the
+                                    <code>document.getElementById</code> method.
+                                    Then, we set the <code>font-weight</code> CSS property of the selected element to
+                                    bold,
+                                    making the text
+                                    bold.
+                                </p>
+                            </section>
+
+                            <section class="w-full py-12 md:py-24 lg:py-32 mx-12">
+                                <h2 class="text-2xl font-bold">Class Selectors</h2>
+                                <p class="text-gray-500 dark:text-gray-400">This section demonstrates the use of class
+                                    selectors in CSS.</p>
+                                <div class="classSelect1">
+                                    <p class=" text-red-600">This paragraph has red text.</p>
+                                    <p class=" text-blue-600">This paragraph has blue text.</p>
+                                </div>
+                                <p class="text-gray-500 dark:text-gray-400">In this example, we select elements with the
+                                    class "redText" and
+                                    "blueText" using the
+                                    <code>document.querySelectorAll('.className')</code> method.
+                                    Then, we use the <code>forEach</code> method to iterate over each selected element
+                                    and
+                                    apply
+                                    corresponding styles.
+                                </p>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mx-auto max-w-screen-lg px-4 md:px-6 lg:px-8 py-12 md:py-6 lg:py-10">
+            <div class="grid gap-8 md:grid-cols-3 lg:grid-cols-4">
+                <div class="col-span-1 space-y-2">
+                    <div class="flex items-center gap-2">
+
+
+                        <section class="flex-1 px-4 py-8 md:px-6 lg:py-12">
+                            <h2 class="text-2xl font-bold">Attribute Selectors</h2>
+                            <p class="text-gray-500 dark:text-gray-400">This section demonstrates the use of attribute
+                                selectors in CSS.
+                            </p>
+                            <div class="attSelect">
+                                <input type="text" placeholder="Enter your username">
+                                <input type="password" placeholder="Enter your password">
+                            </div>
+                            <p class="text-gray-500 dark:text-gray-400">In this example, we select input elements with
+                                the type
+                                attribute "text" using the
+                                <code>document.querySelectorAll('[attributeName]')</code> method.
+                                Then, we apply styles to these selected elements.
+                            </p>
+                        </section>
+
+                        <section class="flex-1 px-4 py-8 md:px-6 lg:py-12">
+                            <h2 class="text-2xl font-bold">Attribute Value Selectors</h2>
+                            <p class="text-gray-500 dark:text-gray-400">This section demonstrates the use of attribute
+                                value selectors
+                                in CSS.</p>
+                            <div class="attSelectVal">
+                                <button type="button">Click me!</button>
+                                <button type="submit">Submit</button>
+                            </div>
+                            <p class="text-gray-500 dark:text-gray-400">In this example, we select button elements with
+                                the type
+                                attribute value "submit" using the
+                                <code>document.querySelectorAll('[attributeName="value"]')</code> method.
+                                Then, we apply styles to these selected elements.
+                            </p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section id="Program Examples">
+        <h1
+            class="lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]">
+            Program Examples</h1>
+        <br><br>
+        <h2 class="text-2xl font-bold">Attribute Selectors</h2>
+        <div class="mockup-code mt-4">
+            <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Tag Selectors&lt;/title&gt;
+    &lt;style&gt;
+        div {
+            color: blue; /* CSS selector for div */
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+    &lt;div&gt;This is a div.&lt;/div&gt;
+    &lt;span&gt;This is a span.&lt;/span&gt;
+
+    &lt;script&gt;
+        document.querySelectorAll('div').forEach(element =&gt; {
+            element.style.color = 'blue';
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+            </code></pre>
+        </div>
+    </section>
+
+    <section id="Program Examples">
+        <h2 class="text-2xl font-bold">Tag Selectors</h2>
+        <div class="mockup-code mt-4">
+            <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;ID Selectors&lt;/title&gt;
+    &lt;style&gt;
+        #uniqueParagraph {
+            font-weight: bold; /* CSS selector for unique paragraph */
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p id="uniqueParagraph"&gt;This is a unique paragraph.&lt;/p&gt;
+
+    &lt;script&gt;
+        const uniqueParagraph = document.getElementById('uniqueParagraph');
+        uniqueParagraph.style.fontWeight = 'bold';
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+        </div>
+    </section>
+
+    <section id="Program Examples">
+        <h2 class="text-2xl font-bold">ID Selectors</h2>
+        <div class="mockup-code mt-4">
+            <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Class Selectors&lt;/title&gt;
+    &lt;style&gt;
+        .redText {
+            color: red; /* CSS selector for red text */
+        }
+        .blueText {
+            color: blue; /* CSS selector for blue text */
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p class="redText"&gt;This paragraph has red text.&lt;/p&gt;
+    &lt;p class="blueText"&gt;This paragraph has blue text.&lt;/p&gt;
+
+    &lt;script&gt;
+        document.querySelectorAll('.redText').forEach(element =&gt; {
+            element.style.color = 'red';
+        });
+
+        document.querySelectorAll('.blueText').forEach(element =&gt; {
+            element.style.color = 'blue';
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+        </div>
+    </section>
+    <section id="Program Examples">
+        <h2 class="text-2xl font-bold">Class Selectors</h2>
+        <div class="mockup-code mt-4">
+            <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Attribute Selectors&lt;/title&gt;
+    &lt;style&gt;
+        input[type="text"] {
+            background-color: lightgray; /* CSS selector for text input */
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;input type="text" value="This is a text input"&gt;
+
+    &lt;script&gt;
+        document.querySelectorAll('input[type="text"]').forEach(element =&gt; {
+            element.style.backgroundColor = 'lightgray';
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+        </div>
+    </section>
+    <script src="selectors.js"></script>
 </body>
 
 </html>
