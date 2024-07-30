@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular Component and Routing Example</title>
+    <link rel="stylesheet" href="resources/styles/angular.css">
+</head>
+
+<body>
+    <header>
+        <h1>Understanding Angular: Components and Routing</h1>
+        <div class="navigation">
+            <a href="#component-example">Component Example</a>
+            <a href="#routing-example">Routing Example</a>
+            <a href="index.html">Back to Home Page</a>
+        </div>
+    </header>
+
+    <section id="component-example" class="section">
+        <h2>Angular Component Example</h2>
+        <p>
+            In Angular, a component is a fundamental building block that controls a part of the user interface (UI).
+            Each component consists of three main parts:
+        <ol>
+            <li><b>Template:</b> Defines the HTML view of the component.</li>
+            <li><b>Class:</b> Contains the logic of the component, including properties and methods.</li>
+            <li><b>Metadata:</b> Provides Angular with information about the component, such as its selector and
+                template.</li>
+        </ol>
+        Here's a basic example:
+        </p>
+        <div class="example-code">
+            <pre><code>
+                import { Component, NgModule } from '@angular/core';
+                import { BrowserModule } from '@angular/platform-browser';
+                
+                // Define a component with a selector and a template
+                @Component({
+                    selector: 'app-root',  // HTML tag to use this component
+                    template: '&lt;h1&gt;Hello, Angular Component!&lt;/h1&gt;'  // HTML content to be displayed
+                })
+                export class AppComponent { }  // The component class with logic (empty in this example)
+                
+                // Define an Angular module to declare and bootstrap the component
+                @NgModule({
+                    declarations: [AppComponent],  // Declare the component in the module
+                    imports: [BrowserModule],      // Import BrowserModule to run Angular in a browser
+                    bootstrap: [AppComponent]       // Bootstrap the component to start the application
+                })
+                export class AppModule { }  // The module class            </code></pre>
+        </div>
+
+        <h3>Explanation:</h3>
+        <p><code>@Component</code> Decorator:</p>
+        <ul>
+            <li><code>selector:</code> Specifies the custom HTML tag that will be used to embed this component.</li>
+            <li><code>template:</code> Defines the HTML content that this component will display. In the code, we use
+                &lt;h1&gt; and &lt;/h1&gt; to escape HTML tags and show them as text.</li>
+        </ul>
+
+        <p><code>AppComponent</code> Class:</p>
+        <ul>
+            <li>Contains the logic for the component (empty here, but typically includes properties and methods).</li>
+        </ul>
+
+        <p><code>@NgModule</code> Decorator:</p>
+        <ul>
+            <li><code>declarations:</code> Lists all components that belong to this module.</li>
+            <li><code>imports:</code> Imports other Angular modules needed by this module.</li>
+            <li><code>bootstrap:</code> Specifies the root component that Angular should bootstrap when starting the
+                application.</li>
+        </ul>
+    </section>
+
+    <section id="routing-example" class="section">
+        <h2>Angular Routing Example</h2>
+        <p>
+            Angular routing allows you to navigate between different views or pages in a single-page application (SPA).
+            It uses routes to define paths and associate them with components.<br><br>
+            Here's a simple example of setting up routing:
+        </p>
+        <div class="example-code">
+            <pre><code>
+                import { NgModule } from '@angular/core';
+                import { RouterModule, Routes } from '@angular/router';
+                import { BrowserModule } from '@angular/platform-browser';
+                
+                // Define routes for different paths
+                const routes: Routes = [
+                    { path: 'home', component: HomeComponent },  // Route for home component
+                    { path: 'about', component: AboutComponent },  // Route for about component
+                ];
+                
+                // Define an Angular module for routing
+                @NgModule({
+                    imports: [RouterModule.forRoot(routes), BrowserModule],  // Import RouterModule and configure routes
+                    exports: [RouterModule]  // Export RouterModule for use in other parts of the app
+                })
+                export class AppRoutingModule { }  // The routing module class
+            </code></pre>
+
+        </div>
+        <h3>Explanation:</h3>
+        <ul>
+            <li><code>RouterModule</code>: Provides routing capabilities.</li>
+            <li><code>Routes</code>: Defines an array of route configurations.</li>
+        </ul>
+        <p><code>Routes Array:</code></p>
+        <ul>
+            <li>Each route maps a URL path (e.g., <code>'home'</code>, <code>'about'</code>) to a component (e.g.,
+                <code>HomeComponent</code>, <code>AboutComponent</code>).</li>
+        </ul>
+        <p><code>@NgModule</code> Decorator for Routing Module:</p>
+        <ul>
+            <li><code>imports:</code> Configures routes using <code>RouterModule.forRoot(routes)</code> to set up the
+                routing in the root module.</li>
+            <li><code>exports:</code> Makes <code>RouterModule</code> available to other parts of the application.</li>
+        </ul>
+        <p>In addition to the routing configuration, use the following HTML in your templates for navigation:</p>
+        <pre><code>
+            <a routerLink="/home">Home</a> | <a routerLink="/about">About</a>
+            <router-outlet></router-outlet>
+        </code></pre>
+        <p><code>routerLink</code> creates links to different routes, while <code>router-outlet</code> acts as a
+            placeholder where routed components will be displayed.</p>
+    </section>
+</body>
+
+</html>
